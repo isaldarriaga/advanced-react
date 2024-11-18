@@ -1,5 +1,17 @@
 Test advanced react concepts:
 
+# Installation
+
+- clone the repo
+- `npm instal`
+- `npm run dev`
+- open `http://localhost:3000`
+- open dev tools / console
+  - configure verbosity level: info only
+  - disable setting: 'Group similar messages in console'
+  - refresh the page
+    - wait for `rc` (render count) values
+
 # Components:
  
 ## `CheapTimer` component
@@ -7,7 +19,7 @@ Test advanced react concepts:
 ![img.png](public/Readme/cheap-timer.png)
 
   - Useful for counting down the time to a future date
-  - Direct access to DOM
+  - Direct access to the DOM
     - no state change during animation frames
     - effectively skips having a virtual DOM/diffing for the digits elements
     - no re-renders caused
@@ -16,7 +28,7 @@ Test advanced react concepts:
     - know total renderings
     - hold a reference of elements to update
     - preserve initial values of the time remaining to the specified date
-  - avoids SSR / CSR dom mismatch
+  - avoids SSR / CSR DOM mismatch
     - waits for the first component mount
     - change the state to `isClient = true`
     - re-renders the component one time
